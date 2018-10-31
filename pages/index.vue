@@ -44,7 +44,13 @@
         list: res.data.data,
         visit: res.data.visit
       }
+    },
+
+  head () {
+    return {
+      title: '第一届前端艺术技术沙龙1群每日资讯整理'
     }
+  }
   }
 </script>
 
