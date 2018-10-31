@@ -1,5 +1,7 @@
 # nuxt-demo
 
+> [第一届前端艺术家沙龙1群每日资讯整理](http://fe.jskou.com/)
+
 ## 关于config.js
 
 ```
