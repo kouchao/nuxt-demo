@@ -5,4 +5,4 @@ const ax = axios.create({
 })
 
 
-export const getList = () => ax.get('/')
+export const getList = () => ax.get('/contents/list')
