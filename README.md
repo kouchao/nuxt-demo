@@ -1,6 +1,14 @@
 # nuxt-demo
 
-> 
+## 关于config.js
+
+```
+const BASEURL = 'http://'
+
+export {
+  BASEURL
+}
+```
 > My swell Nuxt.js project
 
 ## Build Setup
