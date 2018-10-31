@@ -3,7 +3,7 @@
     <div class="links">
 
       <h1 class="links__title">第一届前端艺术家沙龙1群每日资讯整理</h1>
-      <div class="links__title">访问次数：{{visit}}</div>
+      <div class="links__title">访问次数：{{count}}</div>
 
       <div class="links__item" v-for="item in list">
         <a :href="item.link">[{{item.updated | formatDate}}] - {{item.title}}</a>
@@ -42,7 +42,7 @@
       const res = await getList();
       return {
         list: res.data.data,
-        visit: res.data.visit
+        count: res.data.count
       }
     },
 
