@@ -10,7 +10,7 @@
       <div class="links__title">访问次数：{{count}}</div>
 
       <div class="links__item" v-for="item in list">
-        <a :href="item.link">[{{item.updated | formatDate}}] - {{item.title}}</a>
+        <a :href="item.link">[{{item.time | formatDate}}] - {{item.title}}</a>
       </div>
     </div>
 

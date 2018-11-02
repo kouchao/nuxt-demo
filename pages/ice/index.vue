@@ -14,7 +14,7 @@
       </div>
 
       <div class="links__item" v-for="item in list">
-        <a :href="item.link">[{{item.updated | formatDate}}] - [{{item.tag}}]{{item.title}}</a>
+        <a :href="item.link">[{{item.time | formatDate}}] - [{{item.tag}}]{{item.title}}</a>
       </div>
     </div>
 
