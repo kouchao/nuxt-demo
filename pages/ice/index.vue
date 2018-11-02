@@ -1,16 +1,20 @@
 <template>
   <div>
     <div class="nav">
-      <nuxt-link to="/" class="nav__item is-active">前端艺术资讯</nuxt-link>
-      <nuxt-link to="/ice" class="nav__item">飞冰早报</nuxt-link>
+      <nuxt-link to="/" class="nav__item">前端艺术资讯</nuxt-link>
+      <nuxt-link to="/ice" class="nav__item is-active">飞冰早报</nuxt-link>
     </div>
     <div class="links">
 
-      <h1 class="links__title">第一届前端艺术家沙龙1群每日资讯整理</h1>
+      <h1 class="links__title">飞冰一群每日早报整理</h1>
       <div class="links__title">访问次数：{{count}}</div>
+      <div class="links__title">
+        收集来自：
+        <a href="https://github.com/alibaba/ice/wiki/zaobao">飞冰一群>></a>
+      </div>
 
       <div class="links__item" v-for="item in list">
-        <a :href="item.link">[{{item.updated | formatDate}}] - {{item.title}}</a>
+        <a :href="item.link">[{{item.updated | formatDate}}] - [{{item.tag}}]{{item.title}}</a>
       </div>
     </div>
 
@@ -23,13 +27,12 @@
 
 
   export default {
-
     filters: {
       formatDate
     },
     async asyncData() {
       const res = await getList({
-        type: 0
+        type: 1
       });
       return {
         list: res.data.data,
@@ -37,11 +40,11 @@
       }
     },
 
-  head () {
-    return {
-      title: '第一届前端艺术家沙龙1群每日资讯整理'
+    head() {
+      return {
+        title: '飞冰一群早报整理'
+      }
     }
-  }
   }
 </script>
 

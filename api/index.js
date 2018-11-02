@@ -5,4 +5,6 @@ const ax = axios.create({
 })
 
 
-export const getList = () => ax.get('/contents/list')
+export const getList = (data) => ax.get('/contents/list', {
+  params: data
+})
