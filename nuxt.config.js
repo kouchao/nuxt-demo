@@ -27,17 +27,14 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    {src:'element-ui/lib/theme-chalk/index.css'}
+    { src: 'element-ui/lib/theme-chalk/index.css' }
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    {
-      src:'~plugins/element-ui',
-      ssr: true //是能在服务端运行
-    }
+    '~/plugins/element-ui'
   ],
 
   /*
@@ -61,9 +58,19 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-      
-    }
+   analyze: true,
+    vendor: ['axios', 'element-ui'],
+    babel: {
+      plugins: [
+        [
+          'component',
+          {
+            libraryName: 'element-ui',
+            styleLibraryName: 'theme-chalk'
+          }
+        ]
+      ]
+    },
   },
   server: {
     port: 3004, // default: 3000
