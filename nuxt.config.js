@@ -27,12 +27,17 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    {src:'element-ui/lib/theme-chalk/index.css'}
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    {
+      src:'~plugins/element-ui',
+      ssr: true //是能在服务端运行
+    }
   ],
 
   /*

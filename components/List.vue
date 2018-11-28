@@ -1,12 +1,16 @@
 <template>
   <div>
     <div class="nav">
-      <nuxt-link to="/" class="nav__item is-active">前端艺术家</nuxt-link>
-      <nuxt-link to="/ice" class="nav__item">飞冰早报</nuxt-link>
+      <nuxt-link to="/" class="nav__item">前端艺术资讯</nuxt-link>
+      <nuxt-link to="/ice" class="nav__item is-active">飞冰早报</nuxt-link>
     </div>
     <div class="links">
-        <h2 class="links__title">前端艺术家1群每日资讯整理</h2>
-        <div class="links__title">接口调用次数：{{visited}}</div>
+      <h1 class="links__title">{{title}}</h1>
+      <div class="links__title">接口调用次数：{{visited}}</div>
+      <div class="links__title">
+        收集来自：
+        <a href="https://github.com/alibaba/ice/wiki/zaobao">飞冰一群>></a>
+      </div>
 
       <a :href="item.link" :key="item._id" class="links__item" v-for="item in list">
         <div class="links__time">[{{item.time | formatDate}}] - </div>
@@ -39,15 +43,19 @@ export default {
   filters: {
     formatDate
   },
+  props: {
+    title: String,
+    type: Number,
+  },
   data(){
     return {
-      page: 0,
+      page: 1,
       pageSize: 30
     }
   },
   async asyncData() {
     const res = await getList({
-      type: 0
+      type: 1
     });
     return {
       list: res.data.data,
@@ -57,14 +65,14 @@ export default {
   },
   head() {
     return {
-      title: "飞冰一群早报整理"
+      title: this.title
     };
   },
   methods: {
     async getList() {
       const { page, pageSize } = this
       const res = await getList({
-        type: 0,
+        type: 1,
         page: page - 1,
         pageSize
       });
@@ -83,3 +91,4 @@ export default {
   }
 };
 </script>
+
