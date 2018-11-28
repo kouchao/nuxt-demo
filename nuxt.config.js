@@ -58,7 +58,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-   analyze: true,
+  //  analyze: true,
     vendor: ['axios', 'element-ui'],
     babel: {
       plugins: [
