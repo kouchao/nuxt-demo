@@ -57,7 +57,7 @@ export default {
   },
   head() {
     return {
-      title: "飞冰一群早报整理"
+      title: "前端艺术家"
     };
   },
   methods: {
