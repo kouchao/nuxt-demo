@@ -14,3 +14,15 @@ export const formatDate = (input) => {
 
   return input ? year + '-' + month + '-' + day : '未录入';
 }
+
+export const formatTime = (input) => {
+  var d = new Date(input);
+  var year = d.getFullYear();
+  var month = set0(d.getMonth() + 1);
+  var day = set0(d.getDate());
+  var hour = set0(d.getHours());
+  var minutes = set0(d.getMinutes());
+  var seconds = set0(d.getSeconds());
+
+  return input ? year + '-' + month + '-' + day + ' ' + hour + ':' + minutes + ':' + seconds : '未录入';
+}

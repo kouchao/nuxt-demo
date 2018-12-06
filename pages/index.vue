@@ -3,6 +3,9 @@
     <div class="nav">
       <nuxt-link to="/" class="nav__item is-active">前端艺术家</nuxt-link>
       <nuxt-link to="/ice" class="nav__item">飞冰早报</nuxt-link>
+      <nuxt-link to="/message" class="nav__item">
+      留言板 <el-badge is-dot></el-badge>
+      </nuxt-link>
     </div>
     <div class="links">
         <h2 class="links__title">前端艺术家1群每日资讯整理</h2>
@@ -57,7 +60,7 @@ export default {
   },
   head() {
     return {
-      title: "飞冰一群早报整理"
+      title: "前端艺术家"
     };
   },
   methods: {

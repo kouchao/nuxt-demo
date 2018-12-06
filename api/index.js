@@ -5,6 +5,13 @@ const ax = axios.create({
 })
 
 
-export const getList = (data) => ax.get('/contents/list', {
-  params: data
+export const getList = (params) => ax.get('/contents/list', {
+  params
 })
+
+export const getMessage = (params) => ax.get('/message/list', {
+  params
+})
+
+export const sendMessage = (params) => ax.post('/message/add', params)
+
