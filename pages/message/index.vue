@@ -121,7 +121,6 @@ export default {
               });
             }
           } else {
-            alert()
             return false;
           }
         });
