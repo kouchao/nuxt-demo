@@ -44,6 +44,12 @@
         ></el-pagination>
       </div>
     </div>
+    <div style="position: fixed; right: 20px; top: 80px; text-align: center">
+      <a href="https://baike.baidu.com/item/%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%B1%A0%E6%9D%80%E6%AD%BB%E9%9A%BE%E8%80%85%E5%9B%BD%E5%AE%B6%E5%85%AC%E7%A5%AD%E6%97%A5" title="南京大屠杀死难者国家公祭日">
+        <img style="width: 300px" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1545266658&di=1583fca6f9f249994f7b547329fb2091&imgtype=jpg&er=1&src=http%3A%2F%2Fbpic.588ku.com%2Fback_pic%2F05%2F34%2F21%2F795a2959f438a31.jpg" alt="">
+        <h1>铭记历史, 珍爱和平</h1>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -121,7 +127,6 @@ export default {
               });
             }
           } else {
-            alert()
             return false;
           }
         });
