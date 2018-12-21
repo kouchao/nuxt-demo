@@ -38,6 +38,7 @@
           :page-sizes="[30, 50, 100, 200]"
           :page-size="pageSize"
           :total="total"
+          :pager-count="5"
           @size-change="sizeChange"
           @current-change="getList"
           :current-page.sync="page"
@@ -151,6 +152,7 @@ export default {
 
 .content {
   padding: 20px;
+  word-wrap: break-word
 }
 
 .time {

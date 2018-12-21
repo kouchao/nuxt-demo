@@ -15,7 +15,7 @@
         <a href="https://github.com/alibaba/ice/wiki/zaobao">飞冰一群>></a>
       </div>
       <a :href="item.link" :key="item._id" class="links__item" v-for="item in list">
-        <div class="links__time">[{{item.time | formatDate}}] - </div>
+        <div class="links__time">[{{item.time | formatDate}}] </div>
         <div class="links__a">
           {{item.tag ? `[${item.tag}]` : '' }} {{item.title}}
         </div>
@@ -27,6 +27,7 @@
           :page-sizes="[30, 50, 100, 200]"
           :page-size="pageSize"
           :total="total"
+          :pager-count="5"
           @size-change="sizeChange"
           @current-change="getList"
           :current-page.sync="page">

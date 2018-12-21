@@ -77,6 +77,36 @@
     .nav__item.is-active {
       border-bottom: 4px solid #409EFF;
     }
+
+    @media screen and (max-width: 800px) {
+      .nav {
+        position: fixed;
+        justify-content: space-around;
+      }
+
+      .nav__item {
+        margin: 0;
+      }
+
+      .links {
+        padding: 80px 20px 20px;
+        width: auto;
+      }
+
+      .links__item {
+        display: block;
+        border-bottom: 1px solid #f8f8f8
+      }
+
+      .links__a {
+        width: auto;
+      }
+
+      .links__time {
+        font-size: 12px
+      }
+
+    }
   </style>
 </head>
 
