@@ -39,14 +39,16 @@
           <h1>铭记历史, 珍爱和平</h1>
         </a>
       </div> -->
+
+      <Christmas/>
     </div>
   </div>
 </template>
 
 <script>
-import Nav from "~/components/Nav";
 import { getList } from "~/api";
 import { formatDate } from "~/filters";
+import Christmas from "~/components/Christmas";
 
 export default {
   filters: {
@@ -59,7 +61,7 @@ export default {
     }
   },
   components: {
-    Nav
+    Christmas
   },
   async asyncData() {
     const res = await getList({

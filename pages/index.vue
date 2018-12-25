@@ -38,12 +38,14 @@
         <h1>铭记历史, 珍爱和平</h1>
       </a>
     </div> -->
+    <Christmas/>
   </div>
 </template>
 
 <script>
 import { getList } from "~/api";
 import { formatDate } from "~/filters";
+import Christmas from "~/components/Christmas";
 
 export default {
   filters: {
@@ -64,6 +66,9 @@ export default {
       visited: res.data.visited,
       total: res.data.total
     };
+  },
+  components: {
+    Christmas
   },
   head() {
     return {
