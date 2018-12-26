@@ -51,14 +51,12 @@
         <h1>铭记历史, 珍爱和平</h1>
       </a>
     </div> -->
-    <Christmas/>
   </div>
 </template>
 
 <script>
 import { getMessage, sendMessage } from "~/api";
 import { formatTime } from "~/filters";
-import Christmas from "~/components/Christmas";
 
 export default {
   filters: {
@@ -93,9 +91,6 @@ export default {
       list: res.data.data,
       total: res.data.total
     };
-  },
-  components: {
-    Christmas
   },
   head() {
     return {
