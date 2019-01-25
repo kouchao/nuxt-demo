@@ -3,8 +3,8 @@
     <div class="nav">
       <nuxt-link to="/" class="nav__item is-active">前端艺术家</nuxt-link>
       <nuxt-link to="/ice" class="nav__item">飞冰早报</nuxt-link>
-      <nuxt-link to="/message" class="nav__item">
-      留言板 <el-badge is-dot></el-badge>
+      <nuxt-link to="/about" class="nav__item">
+      关于 <el-badge is-dot></el-badge>
       </nuxt-link>
     </div>
     <div class="links">
