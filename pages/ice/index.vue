@@ -10,6 +10,9 @@
     <div class="links">
       <h2 class="links__title">飞冰一群每日早报整理</h2>
       <div class="links__title">接口调用次数：{{visited}}</div>
+      <a target="_blank" href="https://alibaba.github.io/ice">
+        <img src="https://user-gold-cdn.xitu.io/2019/1/25/168818655586e047?imageslim" style="width:100%;height:auto" alt="">
+      </a>
       <a target="_blank" :href="item.link" :key="item._id" class="links__item" v-for="item in list">
         <div class="links__time">[{{item.time | formatDate}}] </div>
         <div class="links__a">
