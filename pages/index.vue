@@ -11,7 +11,7 @@
         <h2 class="links__title">前端艺术家1群每日资讯整理</h2>
         <div class="links__title">接口调用次数：{{visited}}</div>
 
-      <a :href="item.link" :key="item._id" class="links__item" v-for="item in list">
+      <a target="_blank" :href="item.link" :key="item._id" class="links__item" v-for="item in list">
         <div class="links__time">[{{item.time | formatDate}}] </div>
         <div class="links__a">
           {{item.tag ? `[${item.tag}]` : '' }} {{item.title}}

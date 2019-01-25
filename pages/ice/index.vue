@@ -12,9 +12,9 @@
       <div class="links__title">接口调用次数：{{visited}}</div>
       <div class="links__title">
         收集来自：
-        <a href="https://github.com/alibaba/ice/wiki/zaobao">飞冰一群>></a>
+        <a target="_blank" href="https://github.com/alibaba/ice/wiki/zaobao">飞冰一群>></a>
       </div>
-      <a :href="item.link" :key="item._id" class="links__item" v-for="item in list">
+      <a target="_blank" :href="item.link" :key="item._id" class="links__item" v-for="item in list">
         <div class="links__time">[{{item.time | formatDate}}] </div>
         <div class="links__a">
           {{item.tag ? `[${item.tag}]` : '' }} {{item.title}}
