@@ -8,7 +8,12 @@
       </nuxt-link>
     </div>
     <div class="links">
-      <h2 class="links__title">飞冰一群每日早报整理</h2>
+      <h2 class="links__title">
+          飞冰一群每日早报整理
+          <a href="https://rsshub.app/jskou/1" target="_blank" title="订阅">
+            <img class="rss" src="~/assets/rss.svg" alt="订阅"/>
+          </a>
+        </h2>
       <div class="links__title">接口调用次数：{{visited}}</div>
       <a target="_blank" :href="item.link" :key="item._id" class="links__item" v-for="item in list">
         <div class="links__time">[{{item.time | formatDate}}] </div>
