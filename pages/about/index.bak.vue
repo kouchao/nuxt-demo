@@ -7,7 +7,7 @@
          留言板 <el-badge is-dot></el-badge>
       </nuxt-link>
     </div>
-    <div class="links">
+    <div class="container">
       <div class="card" :key="item._id" v-for="item in list">
         <div class="name">{{item.name}}说：</div>
         <div class="content">{{item.content}}</div>
