@@ -88,13 +88,15 @@
 <body {{ BODY_ATTRS }}>
   {{ APP }}
 <script>
-  // var _hmt = _hmt || [];
-  // (function() {
-  //   var hm = document.createElement("script");
-  //   hm.src = "https://hm.baidu.com/hm.js?ff4c3b60e3c30ef82738ba515cbe1c11";
-  //   var s = document.getElementsByTagName("script")[0];
-  //   s.parentNode.insertBefore(hm, s);
-  // })();
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?ff4c3b60e3c30ef82738ba515cbe1c11";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+  const colors = ['auto', 'light', 'dark']
+  document.querySelector('body').className = colors[localStorage.colorIndex || 0]
 </script>
 
 </body>

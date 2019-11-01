@@ -4,17 +4,14 @@
     <div class="container">
       <nuxt/>
     </div>
-    <Color class="color"></Color>
   </div>
 </template>
 
 <script>
 import Nav from './Nav'
-import Color from './Color'
 export default {
   components: {
-    Nav,
-    Color
+    Nav
   }
 }
 </script>

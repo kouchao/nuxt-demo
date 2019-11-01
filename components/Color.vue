@@ -34,6 +34,7 @@ export default {
     changeColor(index = 0) {
       document.querySelector('body').className = this.colors[index].color
       this.activeIndex = index
+      localStorage.colorIndex = index
     }
   }
 }
@@ -41,13 +42,15 @@ export default {
 
 <style scoped>
   .clolor {
-    position: fixed;
+    /* position: fixed; */
     display: flex;
     align-items: center;
-    top: 80px;
-    right: 0;
-    border: 1px solid var(--borderColor);
-    text-align: center
+    justify-content: center;
+    /* top: 80px; */
+    /* right: 0; */
+    /* border: 1px solid var(--borderColor); */
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   .auto.block {
